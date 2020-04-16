@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE xml>
+<testdata>
+	<test name="Searching for 65 inch TV">
+		<category name="Electronics"></category>
+		<searchText name="65 inch"></searchText>
+	</test>
+		<test name="Searching for 50 inch TV">
+		<category name="Electronics"></category>
+		<searchText name="65 inch"></searchText>
+	</test>
+		
+</testdata>

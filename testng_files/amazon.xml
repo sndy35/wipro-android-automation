@@ -1,0 +1,13 @@
+
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Telstra Assignment" verbose="1">
+	
+	<test name="Search Product without Login" parallel="false" thread-count="1">
+		  <parameter name="xmlFile" value="products.xml" />
+		 <classes>
+            <class name="com.wipro.android.search.SearchProductTest">
+            </class>
+        </classes>
+	</test>
+</suite>
+

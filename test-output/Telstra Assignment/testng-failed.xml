@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Telstra Assignment]">
+  <parameter name="xmlFile" value="products.xml"/>
+  <test thread-count="1" name="Search Product without Login">
+    <parameter name="xmlFile" value="products.xml"/>
+    <classes>
+      <class name="com.wipro.android.search.SearchProductTest"/>
+    </classes>
+  </test> <!-- Search Product without Login -->
+  <test name="Search Product without Login(failed)">
+    <parameter name="xmlFile" value="products.xml"/>
+    <classes>
+      <class name="com.wipro.android.search.SearchProductTest">
+        <methods>
+          <include name="searchProduct" invocation-numbers="0 1"/>
+          <include name="setUp"/>
+          <include name="afterSuite"/>
+          <include name="handleTestMethodName"/>
+          <include name="closeApp"/>
+        </methods>
+      </class> <!-- com.wipro.android.search.SearchProductTest -->
+    </classes>
+  </test> <!-- Search Product without Login(failed) -->
+</suite> <!-- Failed suite [Telstra Assignment] -->
