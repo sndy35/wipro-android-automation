@@ -1,17 +1,14 @@
 package com.wipro.android.pages;
 
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedConditions;
+
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.wipro.android.utils.AndroidActions;
 import com.wipro.reporting.Logger;
 
 import io.appium.java_client.AppiumDriver;
-import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
-import io.appium.java_client.android.nativekey.AndroidKey;
-import io.appium.java_client.android.nativekey.KeyEvent;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 
@@ -42,7 +39,9 @@ public class HomeScreen extends AndroidActions{
     }
     
     /*
+     * Searches for the item passed as argument
      * @param searchText- Item to the searched in the search bar 
+     * @return boolean indicating if the item is searched successfully
      */
     public boolean searchItem(String searchText){
     		logger.info("searchItem: Searching for item "+searchText);
@@ -52,7 +51,7 @@ public class HomeScreen extends AndroidActions{
     
     /*
      * This functions verifies if the cart is empty
-     * @return true if the cart is empty
+     * @return String current value of the cart in string format
      */
     public String getCartValue() {
 	    	logger.info("getCartValue: Getting the cart value");

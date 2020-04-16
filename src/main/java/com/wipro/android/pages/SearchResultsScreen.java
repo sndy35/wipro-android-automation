@@ -3,9 +3,8 @@ package com.wipro.android.pages;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.openqa.selenium.By;
+
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.wipro.android.utils.AndroidActions;
@@ -43,6 +42,8 @@ public class SearchResultsScreen extends AndroidActions {
 
 	/*
 	 * This function selects the items randomly from list of items in search screen
+	 * @param searchText item to be searched in the application
+	 * @return String name of the product selected from results
 	 */
 	public String selectRandomItemFromList(String searchText) {
 		logger.info("selectRandomItemFromList: selecting random item from list of results");

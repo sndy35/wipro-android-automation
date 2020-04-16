@@ -87,7 +87,9 @@ public abstract class AndroidActions {
 	}
 
 	/*
-	 * utility function to scroll to top of  the screen
+	 * utility function to scroll to top of screen
+	 * @param el Element to verify if the the scroll action to top is visible
+	 * @return boolean indicating if the element is visible
 	 */
 	public boolean scrollToTopOfScreen(MobileElement el) {
 		logger.info("scrollToTopOfScreen: Scrolling to top of the screen");
@@ -115,9 +117,9 @@ public abstract class AndroidActions {
 	}
 	
 	/*
-	 * utility function to scroll to the element passed as param
-	 * 
-	 * @param - Element to be scrolled to
+	 * utility function to scroll to the element passed as parameter 
+	 * @param - el Element to be scrolled to
+	 * @return boolean value indicating if the element is found
 	 */
 	public boolean scrollToElement(MobileElement el) {
 		logger.info("scrollToElement: Scroll to element"+el);
@@ -146,6 +148,8 @@ public abstract class AndroidActions {
 
 	/*
 	 * utility function to click on an element
+	 * @param el Element on which click action has to be performed
+	 * @return boolean value indicating if the click action is successful
 	 */
 	public boolean clickOnElement(MobileElement el) {
 		logger.info("clickOnElement: Clicking on element");
@@ -161,9 +165,10 @@ public abstract class AndroidActions {
 	}
 	
 	/*
-	 * utility function to check visibility on an element
+	 * utility function to verify if an element exists
+	 * @param el Element which has to be verified if it exists
+	 * @return boolean value indicating if the element exists
 	 */
-	
 	public boolean verifyElementExists(MobileElement el) {
 		
 		logger.info("verifyElementExists: checking if element is visible");
@@ -184,7 +189,10 @@ public abstract class AndroidActions {
 	}
 	
 	/*
-	 * utility function to click on an element
+	 * utility function to enter text to textbox element
+	 * @param el Element to which text has to be passed
+	 * @param value Value to be passed to textbox element
+	 * @return boolean value indicating if the value is entered successfully
 	 */
 	public boolean enterText(MobileElement el, String value) {
 		logger.info("enterText: Entering text data");

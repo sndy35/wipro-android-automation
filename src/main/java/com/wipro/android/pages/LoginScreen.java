@@ -1,17 +1,14 @@
 package com.wipro.android.pages;
 
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.wipro.android.utils.AndroidActions;
 import com.wipro.reporting.Logger;
 
 import io.appium.java_client.AppiumDriver;
-import io.appium.java_client.android.AndroidDriver;
+
 import io.appium.java_client.android.AndroidElement;
-import io.appium.java_client.android.nativekey.AndroidKey;
-import io.appium.java_client.android.nativekey.KeyEvent;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 
@@ -50,6 +47,7 @@ public class LoginScreen extends AndroidActions{
 
 	/*
 	 * This function skips the login and takes to the home screen of the app
+	 * @return boolean indicating if the login is successful
 	 */
 	public boolean skipLogin() {
 		logger.info("skipLogin: skipping Login");
@@ -65,6 +63,9 @@ public class LoginScreen extends AndroidActions{
 	
 	/*
 	 * This function will login to app using the credentials passed
+	 * @param userName username of the user to be logged in
+	 * @param passwordEncrypted encrypted password of the user to be logged in
+	 * @return boolean indicating if the login is successful
 	 */
 	public boolean login(String userName, String passwordEncrypted) {
 		logger.info("login:  Login to app with user "+userName);

@@ -1,7 +1,6 @@
 package com.wipro.android.pages;
 
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.wipro.android.utils.AndroidActions;
@@ -51,7 +50,9 @@ public class CheckoutProduct extends AndroidActions{
 	}
 
 	/*
-	 * Function add Item to the cart
+	 * Function to add Item to the cart
+	 * @param Current value of cart
+	 * @return true if the item is added to cart else it returns false
 	 */
 	public boolean addItemToCart(int currentCartValue) {
 		logger.info("addItemToCart: Adding item to cart");
@@ -83,6 +84,7 @@ public class CheckoutProduct extends AndroidActions{
 	
 	/*
 	 * Function to check buying options is visible
+	 * @return true if buying options button is visible for the product
 	 */
 	private boolean checkBuyingOptions() {
 		logger.info("checkBuyingOptions: checking for buying options button");
@@ -102,6 +104,7 @@ public class CheckoutProduct extends AndroidActions{
 
 	/*
 	 * Function to click on basket once the item is added to cart
+	 * @return true if the click action on basket icon is successful
 	 */
 	public boolean clickOnBasket() {
 		logger.info("clickOnBasket: Clicking on the basket icon");
