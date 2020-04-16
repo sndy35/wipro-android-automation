@@ -27,6 +27,8 @@ public class SearchResultsScreen extends AndroidActions {
 
 	@AndroidFindBy(xpath = "//android.view.View[1]/android.view.View")
 	private List<AndroidElement> searchResults;
+	
+	private String xPathValidResult = "//android.view.View/android.view.View/android.view.View[@text='%s']";
 
 	/*
 	 * Constructor to initialize the SearchResultsScreen with driver
@@ -52,7 +54,7 @@ public class SearchResultsScreen extends AndroidActions {
 			for (MobileElement el : searchResults) {
 				String txtAttribute = el.getAttribute("text");
 				if(txtAttribute.contains("TV")) {
-					validItems.add("//android.view.View/android.view.View/android.view.View[@text='" + txtAttribute + "']");
+					validItems.add(String.format(xPathValidResult, txtAttribute));
 				}
 			}
 			int validResults = validItems.size();

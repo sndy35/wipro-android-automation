@@ -25,22 +25,19 @@ public class SearchProductTest extends BaseTest {
 		logger.info("searchProduct: Running Test to search for "+searchText);
 		loginScreen.skipLogin();
 		String actual = null;
-		String expected = null;
-		
+		String expected = null;		
 		int initialCartValue = Integer.parseInt(homeScreen.getCartValue());
 		if(initialCartValue != 0) {
 			logger.fail("searchProduct: product returned is empty");
 			Assert.fail("Initial Cart Value is Empty");
 		}
-		result = result && homeScreen.searchItem(searchText);
-		
+		result = result && homeScreen.searchItem(searchText);	
 		expected = searchScreen.selectRandomItemFromList(searchText);
 		logger.info("searchProduct: Expected product name is "+expected);
 		if(expected == null) {
 			logger.fail("searchProduct: product returned is empty");
 			Assert.fail("searchProduct: product returned is empty");
 		}			
-		
 		result = result && checkoutProduct.addItemToCart(initialCartValue);
 		result = result && checkoutProduct.clickOnBasket();
 		actual = checkoutProduct.getProductNameFromCheckoutScreen();
