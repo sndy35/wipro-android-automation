@@ -7,7 +7,7 @@
 	</test>
 		<test name="Searching for 50 inch TV">
 		<category name="Electronics"></category>
-		<searchText name="65 inch"></searchText>
+		<searchText name="50 inch"></searchText>
 	</test>
 		
 </testdata>

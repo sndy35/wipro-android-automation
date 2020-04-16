@@ -12,8 +12,8 @@ import com.wipro.android.pages.SearchResultsScreen;
 import com.wipro.android.testdata.TestParameters;
 
 public class SearchProductTest extends BaseTest {
-	//,retryAnalyzer=com.wipro.android.listeners.RetryListener.class
-	@Test(dataProvider = "testData")
+	
+	@Test(dataProvider = "testData",retryAnalyzer=com.wipro.android.listeners.RetryListener.class)
 	public void searchProduct(String testName, TestParameters test) throws InterruptedException {
 		
 		LoginScreen loginScreen = new LoginScreen(driver, logger);
